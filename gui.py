@@ -29,7 +29,7 @@ def countdown(window):
                 sleep(0.25)
                 window.write_event_value(('-THREAD-', key), step)
 
-# FIXME: MISSING THREAD QUE
+# FIXME: MISSING THREAD QUEUE
 def blink_dot(windows):
     """Background thread that changes the color of a red dot to
     green every 5 seconds over 75 seconds."""
