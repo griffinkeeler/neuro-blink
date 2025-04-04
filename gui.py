@@ -2,7 +2,6 @@ import FreeSimpleGUI as sg
 from time import sleep
 
 
-
 def countdown(window):
     """Background thread that outputs
       "3...2...1" one character at a time."""
@@ -24,12 +23,13 @@ def countdown(window):
             # Opens window two once thread is complete.
             sleep(0.25)
             window.write_event_value(('-THREAD-', '-OPEN_WINDOW_TWO-'), phase)
-        for step in range(0, 3):
-            key = step_keys[phase][step]
-            sleep(0.25)
-            window.write_event_value(('-THREAD-', key), step)
+        if phase in step_keys:
+            for step in range(0, 3):
+                key = step_keys[phase][step]
+                sleep(0.25)
+                window.write_event_value(('-THREAD-', key), step)
 
-
+# TODO: FIX THREAD QUE
 def blink_dot(windows):
     """Background thread that changes the color of a red dot to
     green every 5 seconds over 75 seconds."""
