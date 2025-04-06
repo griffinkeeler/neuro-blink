@@ -1,7 +1,6 @@
 import FreeSimpleGUI as sg
 from time import sleep
 
-
 def countdown(window):
     """Background thread that outputs
       "3...2...1" one character at a time."""
@@ -43,6 +42,10 @@ def blink_dot(windows):
         for c in range(0, 5):
             windows.write_event_value(('-THREAD-', '-RED_DOT-'), c)
             sleep(1)
+
+# TODO: ADD main() FUNCTION
+def main():
+    window_one()
 
 def window_one():
     """The first window for the GUI."""
