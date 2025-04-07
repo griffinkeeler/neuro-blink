@@ -43,10 +43,6 @@ def blink_dot(windows):
             windows.write_event_value(('-THREAD-', '-RED_DOT-'), c)
             sleep(1)
 
-# TODO: ADD main() FUNCTION
-def main():
-    window_one()
-
 def window_one():
     """The first window for the GUI."""
 

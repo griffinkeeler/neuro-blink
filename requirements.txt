@@ -2,4 +2,5 @@ FreeSimpleGUI==5.2.0.post1
 scipy
 pylsl==1.17.6
 git+https://github.com/alexandrebarachant/muse-lsl.git
+pandas
 
