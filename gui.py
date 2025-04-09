@@ -70,7 +70,7 @@ def window_one():
 
     # Window is created.
     window = sg.Window("Blink Calibrator", layout_one,
-                       size=(250, 200), auto_size_text=True)
+                       size=(250, 200), auto_size_text=True, finalize=True)
 
     # Main Loop
     while True:
@@ -127,7 +127,7 @@ def window_two():
                   ]
 
     window = sg.Window("Calibration", layout_two,
-                           size=(250, 150), background_color='white')
+                           size=(250, 150), background_color='white', finalize=True)
 
     # Begins the thread right away.
     window.start_thread(lambda: blink_dot(window),
@@ -158,7 +158,7 @@ def window_three():
                     [sg.Text()],
                     [sg.Text()], [sg.Text()], [sg.Text()]
                     ]
-    window = sg.Window("Calibration Complete", layout_three)
+    window = sg.Window("Calibration Complete", layout_three, finalize=True)
 
     while True:
         event, values = window.read()
