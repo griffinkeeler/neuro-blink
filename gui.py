@@ -29,20 +29,16 @@ def countdown(window):
                 sleep(0.25)
                 window.write_event_value(('-THREAD-', key), step)
 
-# FIXME: MISSING THREAD QUEUE
 def blink_dot(windows):
     """Background thread that changes the color of a red dot to
     green every 5 seconds over 75 seconds."""
 
     # Background thread.
     for i in range(0, 15):
+        windows.write_event_value(('-THREAD-', '-RED_DOT-'), i)
+        sleep(5)
         windows.write_event_value(('-THREAD-', '-GREEN_DOT-'), i)
         sleep(0.5)
-        if i == 14:
-            windows.write_event_value(('-THREAD-', '-DOT_DONE-'), i)
-        for c in range(0, 5):
-            windows.write_event_value(('-THREAD-', '-RED_DOT-'), c)
-            sleep(1)
 
 def window_one():
     """The first window for the GUI."""
