@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 def plot_eeg_csv(filepath= '/Users/griffinkeeler/PycharmProjects'
-                           '/neuro-blink-refined/raw_eeg_data.csv'):
+                           '/neuro-blink-refined/filtered_eeg_data.csv'):
     df = pd.read_csv(filepath)
 
     timestamps = df['timestamp']
@@ -17,6 +17,7 @@ def plot_eeg_csv(filepath= '/Users/griffinkeeler/PycharmProjects'
     plt.ylabel("Voltage (uV)")
     plt.legend()
     plt.show()
+
 
 def main():
     plot_eeg_csv()
