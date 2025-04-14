@@ -35,7 +35,7 @@ def eeg_data_to_csv():
 
     # Creates a pandas DataFrame
     df = pd.DataFrame(eeg_data, columns=['timestamp', 'TP9', 'AF7',
-                                         'AF8', 'AF9'])
+                                         'AF8', 'TP10'])
 
     # Saves the DataFrame to a CSV file format
     df.to_csv('raw_eeg_data.csv', index=False)
