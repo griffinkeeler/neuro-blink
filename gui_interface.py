@@ -165,4 +165,5 @@ def window_three():
         if event == sg.WIN_CLOSED:
             break
 
-window_one()
+if __name__ == '__main__':
+    window_one()
