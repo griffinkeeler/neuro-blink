@@ -3,4 +3,5 @@ scipy
 pylsl==1.17.6
 git+https://github.com/alexandrebarachant/muse-lsl.git
 pandas
+matplotlib
 
